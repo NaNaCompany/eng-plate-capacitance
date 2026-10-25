@@ -1,0 +1,56 @@
+export const tool = {
+  "id": "E018",
+  "title": "평행판 정전용량 계산기",
+  "inputs_text": "상대유전율 ε_r [무차원], 겹침 면적 A [m²], 판 간격 d [m]",
+  "formula": "C = ε₀ ε_r A / d",
+  "output_text": "정전용량 C [F]",
+  "assumptions": "ε_r,A,d>0. 균일 유전체가 간격을 채우고 판 치수에 비해 간격이 작아 가장자리 효과를 무시하는 모델이다. 유전율의 주파수·온도 조건을 별도 표기한다.",
+  "purpose": "평행판 커패시터 계산 / 센서·유전체 실험",
+  "sources": [
+    {
+      "label": "OpenStax · Capacitors and Capacitance",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/8-1-capacitors-and-capacitance"
+    },
+    {
+      "label": "OpenStax · Chapter 8 Summary, dielectric capacitance",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/8-summary"
+    }
+  ],
+  "slug": "eng-plate-capacitance",
+  "category": "전기",
+  "result_label": "평행판 정전용량 C",
+  "result_dimension": "capacitance",
+  "fields": [
+    {
+      "key": "er",
+      "label": "상대유전율 ε_r",
+      "dimension": "ratio",
+      "example": 2,
+      "constraint": "positive",
+      "display_unit": "1",
+      "display_value": "2"
+    },
+    {
+      "key": "a",
+      "label": "겹침 면적 A",
+      "dimension": "area",
+      "example": 0.01,
+      "constraint": "positive",
+      "display_unit": "m2",
+      "display_value": "0.01"
+    },
+    {
+      "key": "d",
+      "label": "판 간격 d",
+      "dimension": "length",
+      "example": 0.001,
+      "constraint": "positive",
+      "display_unit": "mm",
+      "display_value": "1"
+    }
+  ],
+  "site": "https://nanalab.kr/eng-plate-capacitance/",
+  "repository": "https://github.com/NaNaCompany/eng-plate-capacitance",
+  "condition": "",
+  "output_unit": "F"
+};
